@@ -2,6 +2,9 @@
 constrcut :<br />
 QThread thread2;<br />
 QDbInteractionThread db_object(&thread2);<br />
+thread2.start();<br />
+<br />
+example using:<br />
 db_object.query(<br />
     [/*...*/]//thread2 side<br />
     {<br />
@@ -13,7 +16,8 @@ db_object.query(<br />
     {<br />
     //...<br />
     });<br />
-    <br />
+
+<br />
 db_object.query(<br />
     [/*...*/]//thread2 side<br />
     {<br />
